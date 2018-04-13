@@ -62,6 +62,7 @@ namespace LeInfo.Kiosk.yirunKiosk
         /// </summary>
         public void CloseLoadingForm()
         {
+
             if (_LoadingForm == null) return;
             _LoadingForm.Hide();
             _LoadingForm.TopMost = false;
