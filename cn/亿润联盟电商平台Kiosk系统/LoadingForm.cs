@@ -51,6 +51,7 @@ namespace LeInfo.Kiosk.yirunKiosk
         /// </summary>
         public void ShowLoadingForm()
         {
+
             if (_LoadingForm == null) return;
             _ParentForm.TopMost = false;
             _LoadingForm.Show();
