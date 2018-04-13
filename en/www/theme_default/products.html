@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/msg.css">
+    <style type="text/css">
+        div.flexslider { height: 500px; border: none; background: #444; background: rgba(0,0,0,0.7); margin-bottom: 30px; }
+
+        div.flex-viewport { margin-top: 25px; }
+
+        ul.slides li { text-align: center; }
+
+        ol.flex-control-nav { bottom: 30px; }
+
+        ul.flex-direction-nav a { width: 60px; height: 60px; border-radius: 100%; border: 2px solid #FFF; }
+
+        .flex-direction-nav .flex-next { background-position: 0 -104px; right: 20px; }
+
+        .flex-direction-nav .flex-prev { background-position: 0 -14px; left: 20px; }
+    </style>
+
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+    <script type="text/javascript" src="viewjs/products.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="erun">
+
+
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png"></a>
+            </div>
+               <div class="menu">
+                <a href="login.html">
+                    <div class="m m1">log in</div>
+                </a>
+                <a href="orderlist.html">
+                    <div class="m m2">Order</div>
+                </a>
+                <a href="search.html">
+                    <div class="m m3">Search</div>
+                </a>
+                <a href="cart.html">
+                    <div class="m m4">Cart</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="sidebar">
+
+                <a>
+                    <div class="b b-active">Home Page</div>
+                </a>
+                <a href="mall.html">
+                    <div class="b">Mall</div>
+                </a>
+                <a href="union.html">
+                    <div class="b">Alliance</div>
+                </a>
+                <a href="factory.html">
+                    <div class="b">Manufacturers</div>
+                </a>
+                <a href="3d.html">
+                    <div class="b">3D showroom</div>
+                </a>
+
+                <div class="shbutton sh1">
+                    B<br>
+                    a<br>
+                    r<br>
+                    <
+                </div>
+                <div class="shbutton sh2">
+                    B<br>
+                    a<br>
+                    r<br>
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="products">
+
+                <div class="zat"><span class="zat-prompt">Shopping <a href="mall.html" class="zat-at">Mall</a> <a href="javascript:window.history.back();" id="typename" class="zat-at"></a>categories</span></div>
+
+                <div class="products-main">
+
+                    <div id="sliderbanner" class="flexslider">
+                        <ul class="slides">
+                        </ul>
+                    </div>
+
+                    <style>
+                        .flex-viewport { margin-top: 0 !important; }
+                        ul.slides { margin-top: 25px !important; }
+                    </style>
+                    <h2 id="goods_name"></h2>
+
+
+                    <div class="produsts-info">
+
+                        <table width="100%" border="0">
+                            <tr>
+                                <td width="10%"><a href="javascript:;" class="pia-qr">&nbsp;</a></td>
+                                <td width="30%"><span id="goods_sell_price" class="pip"></span></td>
+                                <td width="20%" align="center"><a id="shangjia" href=""  class="pia-zs">Company</a></td>
+                                <td width="20%" align="center"><a href="javascript:;" class="pia-xq">Details</a></td>
+                                <td width="20%" align="center"><a href="javascript:;" class="pia-gm">Buy</a></td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+
+
+
+        <div class="footer"></div>
+
+        <div class="lightbox">
+
+            <div class="nairong">
+                <div class="zat nrzp"><span class="zat-prompt">You look at is <a href="#" id="goods_name2" class="zat-at2"></a> details</span></div>
+
+                <div id="goods_content" class="ssnr">
+                </div>
+
+                <div class="fyfh">
+                    <table width="100%" border="0">
+                        <tr align="center">
+                            <td><a href="javascript:;" class="pia-zss xsg">Scroll up</a></td>
+                            <td><a href="javascript:;" class="pia-xqs fhla">Go back</a></td>
+                            <td><a href="javascript:;" class="pia-zss xxg">Scroll down</a></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="guige">
+
+                <dl class="ggtable">
+                    <div id="type_list" style="height: 700px; overflow-y: auto; overflow-x: hidden; width: 890px;">
+                    </div>
+                    <dt>数量</dt>
+                    <dd><a href="javascript:;" class="jianyi" onclick="reduction();">-</a><input id="goods_num" type="text" class="guigeinput" value="1" maxlength="4" /><a href="javascript:;" class="jiayi" onclick="addend();">+</a></dd>
+
+                    <dd>&nbsp;</dd>
+                    <dd>&nbsp;</dd>
+
+                    <dt>
+                        <table width="100%" border="0">
+                            <tr>
+                                <td width="50%"><span id="goods_sell_price2" class="pip">¥188.00</span></td>
+                                <td width="25%"><a href="#" class="pia-gmz" onclick="addcart()" style="text-align: center">Add Cart</a></td>
+                                <td width="25%"><a href="javascript:;" class="pia-qx" style="text-align: center">Cancel</a></td>
+
+                            </tr>
+                        </table>
+                    </dt>
+                </dl>
+
+
+            </div>
+            <div class="qrs">
+
+
+                <img id="goods_qr" src="" />
+
+                <div class="qrexit">
+
+                    <a href="javascript:;" class="pia-qrx" style="margin: 0 auto;">Go back</a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

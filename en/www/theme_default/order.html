@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+    <script type="text/javascript" src="viewjs/order.js"></script>
+  
+</head>
+
+<body>
+
+    <div class="erun">
+
+
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png"></a>
+            </div>
+                <div class="menu">
+                <a href="login.html">
+                    <div class="m m1">log in</div>
+                </a>
+                <a href="orderlist.html">
+                    <div class="m m2">Order</div>
+                </a>
+                <a href="search.html">
+                    <div class="m m3">Search</div>
+                </a>
+                <a href="cart.html">
+                    <div class="m m4">Cart</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="sidebar">
+
+                <a>
+                    <div class="b b-active">Home Page</div>
+                </a>
+                <a href="mall.html">
+                    <div class="b">Mall</div>
+                </a>
+                <a href="union.html">
+                    <div class="b">Alliance</div>
+                </a>
+                <a href="factory.html">
+                    <div class="b">Manufacturers</div>
+                </a>
+                <a href="3d.html">
+                    <div class="b">3D showroom</div>
+                </a>
+
+                <div class="shbutton sh1">
+                    B<br>
+                    a<br>
+                    r<br>
+                    <
+                </div>
+                <div class="shbutton sh2">
+                    B<br>
+                    a<br>
+                    r<br>
+                    >
+                </div>
+
+            </div>
+
+            <div class="orderlist">
+
+                <div class="listbiao">
+
+                    <div class="cart2-t">
+                        <h3><span>Order details</span></h3>
+                    </div>
+
+                    <table width="100%" border="0" class="lbtable">
+                        <tr class="lbtable-tr1">
+                            <td style="padding: 7px;"><span id="create_time1"></span>Creation Order</td>
+                        </tr>
+                        <tr class="lbtable-tr1">
+                            <td style="border-top: 1px solid #FFF; padding: 7px;"><span id="order_no"></span><span id="create_time2"></span><span id="order_status_text"></span></td>
+                        </tr>
+                    </table>
+
+                    <table width="100%" border="0" class="lbtable2">
+                        <tr>
+                            <th width="20%">Delivery</th>
+                            <td width="30%" id="accept_name"></td>
+                            <th width="20%">Delivery Method</th>
+                            <td width="30%" id="delivery"></td>
+                        </tr>
+                        <tr>
+                            <th>Addr</th>
+                            <td id="address"></td>
+                            <th>Payment Method</th>
+                            <td id="payment"></td>
+                        </tr>
+                        <tr>
+                            <th>Postal Code</th>
+                            <td id="postcode"></td>
+                            <th>Freight</th>
+                            <td id="real_freight1"></td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td id="telphone"></td>
+                            <th>Logistics Company</th>
+                            <td id="freight_name"></td>
+                        </tr>
+                        <tr>
+                            <th>Mobile</th>
+                            <td id="mobile"></td>
+                            <th>Express Number</th>
+                            <td id="delivery_code"></td>
+                        </tr>
+                    </table>
+
+
+                    <div class="fysp">
+                        <div class="sbspsl">
+                        </div>
+                        <a href="javascript:;" class="sxsg">↑</a>
+
+                        <a href="javascript:;" class="sxxg">↓</a>
+                    </div>
+
+                    <table width="100%" border="0" class="lbtable2">
+                        <tr>
+                            <th width="30%">Total</th>
+                            <td width="20%" id="payable_amount"></td>
+                            <th width="30%">Pay</th>
+                            <td width="20%" id="order_amount"></td>
+                        </tr>
+                        <tr>
+                            <th>Freight</th>
+                            <td id="real_freight2"></td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Order discount or price increases</th>
+                            <td id="discount"></td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </table>
+
+
+                    <div class="clearfix"></div>
+
+
+
+                </div>
+
+                <div align="center" >
+                    <a href="orderlist.html" class="pia-qx"  style="display:inline-block;">Back</a>
+                    <a id="buynow" onclick="buynowFn()" class="pia-gm" style="display:none; margin-left:50px;">Pay</a>
+                    <a id="cancel" onclick="cancelFn()" class="pia-gmz" style="display:none; margin-left:50px;">Cancel</a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+
+        </div>
+
+
+
+        <div class="footer"></div>
+
+        <div class="darkbox">
+        </div>
+
+    </div>
+
+
+</body>
+</html>

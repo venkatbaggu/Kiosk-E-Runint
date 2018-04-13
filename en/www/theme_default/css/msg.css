@@ -1,0 +1,4 @@
+﻿.aler-message { background: url(../images/22dark.png); /*background: #40B6D4;*/ height: 48px; line-height: 48px; width: 100%; text-align: center; padding: 12px; position: fixed; float: none; display: none; top: 120px; bottom: 0px; font-weight: bold; font-size: 22px; margin: auto; z-index: 2147483647; color: #ffffff; }
+
+/*修改内容中图片大小*/
+.content img { max-width: 750px; _width: expression(this.width > 750 ? "750px" : this.width); }

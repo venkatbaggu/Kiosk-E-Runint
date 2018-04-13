@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/msg.css">
+    <link rel="stylesheet" href="../jsuitl/css/virtualkeyboard/virtualkeyboard.css">
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+    <script type="text/javascript" src="viewjs/login.js"></script>
+    <body>
+
+        <div class="erun">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png"></a>
+                </div>
+                           <div class="menu">
+                <a href="login.html">
+                    <div class="m m1">log in</div>
+                </a>
+                <a href="orderlist.html">
+                    <div class="m m2">Order</div>
+                </a>
+                <a href="search.html">
+                    <div class="m m3">Search</div>
+                </a>
+                <a href="cart.html">
+                    <div class="m m4">Cart</div>
+                </a>
+            </div>
+
+            </div>
+            <div class="container">
+                <div class="register">
+                    <p>&nbsp;</p>
+                    <div class="recovery">
+                        <h1>Log in</h1>
+                    </div>
+                    <p class="tips">Welcome E-RUN Kiosk
+                    </p>
+                    <div class="reg-from">
+                        <div class="efrom">
+                            <input type="text" id="username_input" class="eput" placeholder="User Name *" />
+                        </div>
+                        <div class="efrom">
+                            <input type="password" id="password_input" class="eput" placeholder="Password *" />
+                        </div>
+                        <div class="ebutton" style="margin-top: 100px;">
+                            <table width="50%" border="0">
+                                <tr align="center">
+                                    <td width="33%"><a onclick="userlogin()" class="pia-gm">Login</a></td>
+                                </tr>
+                            </table>
+                            <table width="50%" border="0" style="margin-top: 50px;">
+                                <tr align="center">
+                                    <td width="33%"><a href="index.html" class="pia-zs">GO Back</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </body>
+</html>

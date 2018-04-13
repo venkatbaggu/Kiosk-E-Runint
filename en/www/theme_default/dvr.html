@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/msg.css">
+    <link rel="stylesheet" href="../jsuitl/css/virtualkeyboard/virtualkeyboard.css">
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+    <script type="text/javascript">
+        require(["jquery"], function ($) {
+
+            var url = decodeURIComponent($.getUrlVar("url"));
+
+            $("#dvrurl").attr("value", url);
+            $.virtualkeyboard.init();
+            $("#username_input").click(function (e) {
+                $.virtualkeyboard.keyboardShowForId("username_input");
+            });
+            $("#password_input").click(function (e) {
+                $.virtualkeyboard.keyboardShowForId("password_input");
+            });
+
+        });
+        var showmsg = function () {
+
+            require(["jquery", "jsuitl/yirunapi"], function ($, API) {
+                API.messageuitl("UserName And Password Error");
+            });
+        }
+        var dvr_loginFn = function () {
+            debugger;
+            var url = $("#dvrurl").val();
+            var user = $("#username_input").val();
+            var paw = $("#password_input").val();
+            if (url && url.length > 0 && user.length > 0 && paw.length > 0) {
+
+                formJs.dvr_login(user, paw, url);
+            } else {
+                window.location.href = "dvrerror.html";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="erun">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png">
+                </a>
+            </div>
+            <div class="menu">
+                <a href="login.html">
+                    <div class="m m1">log in</div>
+                </a>
+                <a href="orderlist.html">
+                    <div class="m m2">Order</div>
+                </a>
+                <a href="search.html">
+                    <div class="m m3">Search</div>
+                </a>
+                <a href="cart.html">
+                    <div class="m m4">Cart</div>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="register">
+
+                <p>&nbsp;</p>
+                <div class="recovery">
+                    <h1>Real time analyzer for merchants DVR</h1>
+                </div>
+
+
+                <div class="reg-from" style="margin-top:200px;">
+                    <input id="dvrurl" type="hidden" value="" />
+
+                    <div class="efrom">
+                        <input id="username_input" type="text" class="eput" placeholder="DVR UserName *" />
+                    </div>
+
+                    <div class="efrom">
+                        <input id="password_input" type="password" class="eput" placeholder="DVR Password *" />
+                    </div>
+
+
+
+                    <div class="ebutton">
+
+                        <table width="50%" border="0">
+                            <tr align="center">
+                                <td width="33%"><a href="javascript:window.history.back();" class="pia-zs">Go back</a></td>
+                                <td width="33%"><a onclick="dvr_loginFn();" class="pia-gm">log in</a></td>
+                            </tr>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

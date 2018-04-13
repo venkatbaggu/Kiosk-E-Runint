@@ -1,0 +1,131 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeInfo.Kiosk.WebControls", "LeInfo.Kiosk.WebControls\LeInfo.Kiosk.WebControls.csproj", "{84E39C83-777A-4738-B718-BC89A1E0F73C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "亿润联盟电商平台Kiosk系统", "亿润联盟电商平台Kiosk系统\亿润联盟电商平台Kiosk系统.csproj", "{435EE6DD-68E5-404B-8691-A2227FED258F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leinfo.Kiosk.Entity", "Leinfo.Kiosk.Entity\Leinfo.Kiosk.Entity.csproj", "{42BCF6E8-343F-40D0-88F4-ADB189558295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiosk.Utils.AutoUpdate", "Kiosk.Utils.AutoUpdate\Kiosk.Utils.AutoUpdate.csproj", "{0500837C-F971-4516-9FEB-6914EC3C287C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLL", "DLL", "{694D9EDC-B879-4CEB-BA02-7549ED439F26}"
+	ProjectSection(SolutionItems) = preProject
+		DLL\ICSharpCode.SharpZipLib.dll = DLL\ICSharpCode.SharpZipLib.dll
+		DLL\log4net.dll = DLL\log4net.dll
+		DLL\Newtonsoft.Json.dll = DLL\Newtonsoft.Json.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DVR_DEMO", "DVR_DEMO\DVR_DEMO.csproj", "{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DVR", "DVR", "{CF806029-BBDA-44C2-8359-A08B7C2C3538}"
+	ProjectSection(SolutionItems) = preProject
+		DLL\DVR\AudioRender.dll = DLL\DVR\AudioRender.dll
+		DLL\DVR\calib.dll = DLL\DVR\calib.dll
+		DLL\DVR\D3DX9_43.dll = DLL\DVR\D3DX9_43.dll
+		DLL\DVR\gdiplus.dll = DLL\DVR\gdiplus.dll
+		DLL\DVR\HCCore.dll = DLL\DVR\HCCore.dll
+		DLL\DVR\HCNetSDK.dll = DLL\DVR\HCNetSDK.dll
+		DLL\DVR\PlayCtrl.dll = DLL\DVR\PlayCtrl.dll
+		DLL\DVR\SuperRender.dll = DLL\DVR\SuperRender.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HCNetSDKCom", "HCNetSDKCom", "{42BF7477-74A0-42E1-8151-5033C0CB7393}"
+	ProjectSection(SolutionItems) = preProject
+		DLL\DVR\HCNetSDKCom\AnalyzeData.dll = DLL\DVR\HCNetSDKCom\AnalyzeData.dll
+		DLL\DVR\HCNetSDKCom\AudioIntercom.dll = DLL\DVR\HCNetSDKCom\AudioIntercom.dll
+		DLL\DVR\HCNetSDKCom\DsSdk.dll = DLL\DVR\HCNetSDKCom\DsSdk.dll
+		DLL\DVR\HCNetSDKCom\HCAlarm.dll = DLL\DVR\HCNetSDKCom\HCAlarm.dll
+		DLL\DVR\HCNetSDKCom\HCCoreDevCfg.dll = DLL\DVR\HCNetSDKCom\HCCoreDevCfg.dll
+		DLL\DVR\HCNetSDKCom\HCDisplay.dll = DLL\DVR\HCNetSDKCom\HCDisplay.dll
+		DLL\DVR\HCNetSDKCom\HCGeneralCfgMgr.dll = DLL\DVR\HCNetSDKCom\HCGeneralCfgMgr.dll
+		DLL\DVR\HCNetSDKCom\HCIndustry.dll = DLL\DVR\HCNetSDKCom\HCIndustry.dll
+		DLL\DVR\HCNetSDKCom\HCPlayBack.dll = DLL\DVR\HCNetSDKCom\HCPlayBack.dll
+		DLL\DVR\HCNetSDKCom\HCPreview.dll = DLL\DVR\HCNetSDKCom\HCPreview.dll
+		DLL\DVR\HCNetSDKCom\HCVoiceTalk.dll = DLL\DVR\HCNetSDKCom\HCVoiceTalk.dll
+		DLL\DVR\HCNetSDKCom\libiconv2.dll = DLL\DVR\HCNetSDKCom\libiconv2.dll
+		DLL\DVR\HCNetSDKCom\msvcr90.dll = DLL\DVR\HCNetSDKCom\msvcr90.dll
+		DLL\DVR\HCNetSDKCom\OpenAL32.dll = DLL\DVR\HCNetSDKCom\OpenAL32.dll
+		DLL\DVR\HCNetSDKCom\StreamTransClient.dll = DLL\DVR\HCNetSDKCom\StreamTransClient.dll
+		DLL\DVR\HCNetSDKCom\SystemTransform.dll = DLL\DVR\HCNetSDKCom\SystemTransform.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeInfo.Kiosk.DVRAPI", "LeInfo.Kiosk.DVRAPI\LeInfo.Kiosk.DVRAPI.csproj", "{FEE26F5F-2719-4197-A46F-362FB29D4A82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeInfo.Kiosk.NoInternet", "LeInfo.Kiosk.NoInternet\LeInfo.Kiosk.NoInternet.csproj", "{A00F3856-765D-44CA-A9E0-CA23C051C9B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Debug|x86.ActiveCfg = Debug|x86
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Debug|x86.Build.0 = Debug|x86
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Release|x86.ActiveCfg = Release|x86
+		{84E39C83-777A-4738-B718-BC89A1E0F73C}.Release|x86.Build.0 = Release|x86
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Debug|x86.ActiveCfg = Debug|x86
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Debug|x86.Build.0 = Debug|x86
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Release|x86.ActiveCfg = Release|x86
+		{435EE6DD-68E5-404B-8691-A2227FED258F}.Release|x86.Build.0 = Release|x86
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Debug|x86.Build.0 = Debug|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Release|x86.ActiveCfg = Release|Any CPU
+		{42BCF6E8-343F-40D0-88F4-ADB189558295}.Release|x86.Build.0 = Release|Any CPU
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Debug|Any CPU.Build.0 = Debug|x86
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Debug|x86.ActiveCfg = Debug|x86
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Debug|x86.Build.0 = Debug|x86
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Release|x86.ActiveCfg = Release|x86
+		{0500837C-F971-4516-9FEB-6914EC3C287C}.Release|x86.Build.0 = Release|x86
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{77A78BE8-ADB6-4E15-88B0-A54C6D8750B3}.Release|x86.Build.0 = Release|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Debug|x86.Build.0 = Debug|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Release|x86.ActiveCfg = Release|Any CPU
+		{FEE26F5F-2719-4197-A46F-362FB29D4A82}.Release|x86.Build.0 = Release|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Debug|x86.Build.0 = Debug|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Release|x86.ActiveCfg = Release|Any CPU
+		{A00F3856-765D-44CA-A9E0-CA23C051C9B7}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF806029-BBDA-44C2-8359-A08B7C2C3538} = {694D9EDC-B879-4CEB-BA02-7549ED439F26}
+		{42BF7477-74A0-42E1-8151-5033C0CB7393} = {CF806029-BBDA-44C2-8359-A08B7C2C3538}
+	EndGlobalSection
+EndGlobal

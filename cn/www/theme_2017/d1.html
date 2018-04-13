@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>亿润终端机</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/e2z.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/msg.css" />
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<style>
+             .swiper-pagination-bullet { width: 10px; height: 10px; border-radius: 10px; transition: all 1s; background: #FFF; opacity: 1; margin: 0 2px !important; }
+             .swiper-pagination-bullet-active { background: #ff6600; width: 30px; transition: all 1s; }
+             .swiper-pagination-bullets { position: absolute; z-index: 99; text-align: center; }
+         </style>
+     </head>
+
+     <body>
+         <div class="e2-top">
+             <div class="swiper-container1" style="height:396px; position: relative;">
+                 <div class="swiper-wrapper" id="adwrapper">
+                     <div class="swiper-slide"><img src="images/banner.png" style="height:357px"></div>
+                     <div class="swiper-slide"><img src="images/banner.png"></div>
+                     <div class="swiper-slide"><img src="images/banner.png"></div>
+                 </div>
+
+                 <div class="swiper-pagination1"></div>
+             </div>
+         </div>-->
+
+
+</head>
+
+<body>
+    <div class="e2-top carousel slide" id="myCarousel">
+
+        <ol id="ad_target_ol" class="carousel-indicators"></ol>
+        <div id="e_run_ad" class="carousel-inner">
+
+        </div>
+    </div>
+
+    <div class="e2-section e2-section-noad">
+        <div class="e2-c1-s1">
+            <div class="e2-c1-s1-left">
+                <div class="e2-c1-s1-left-1"><a href="d0.html"><img src="images/tcon-fanhuib.png"></a></div>
+                <div class="e2-c1-s1-left-2"><a href="#"><img src="images/icon-location.png"> 佛山</a></div>
+            </div>
+            <div class="e2-c1-s1-right">
+                <a href="index.html">首页</a>
+                <a href="b0.html">商品</a>
+                <a href="d0.html" class="e2-menu-actvie">设计</a>
+                <a href="c0.html">装修</a>
+                <a href="e1.html">家居DIY</a>
+            </div>
+        </div>
+
+        <div class="e2-c1-s2">
+            <div class="e2-c1-s2-title">
+                <a href="d0.html">设计首页</a> > 全部设计
+            </div>
+            <div class="e2-c1-s2-2 e2-c1-s2-2-d1" style="padding-left:0;">
+
+                <div class="e2-d1-left" style="position: relative">
+
+                    <span class="e2-c1-s2-2-dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="e2-d1-dropdown1" onclick="window.location.href = 'd11.html';" style="color:#ff6600;">
+                            风格 &nbsp;
+                            <span class="caret" style="transform:scale(2); color: #ccc;"></span>
+                        </button>
+
+                    </span>
+
+                    <a href="javascript:;" class="e2-d0-hxmj"><span class="orange">户型 | 面积</span> <span class="caret" style="transform:scale(2); color: #ccc;"></span></a>
+                </div>
+
+               
+
+                <div class="e2-c1-s2-right">
+                    排序：
+
+                    <span class="e2-c1-s2-2-dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="e2-d1-dropdown-r" data-toggle="dropdown">
+                            热度
+                            <span class="caret" style="transform:scale(2); color: #ccc;"></span>
+                        </button>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="e2-d1-dropdown-r">
+                            <a id="sort_one" href="javascript:select_sort_by(1);" class="active">从低到高</a>
+                            <a id="sort_tow" href="javascript:select_sort_by(2)">从高到低</a>
+                        </div>
+
+                    </span>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="e2-c1-s3" id="designList_div">
+            <!--<div class="e2-c1-s3-block">
+                <img src="images/c0-s2-1.png" width="318" height="174">
+                <div class="e2-c0-s2-slidetitle e2-owt">简约欧美风格</div>
+                <div class="e2-c0-s2-slideinfo"><span>两居室</span>|<span>89平米</span>|<span>简约</span></div>
+            </div>-->
+
+
+
+        </div>
+
+        <div class="e2-pagination" id="pager_root_div">
+            <div class="e2-pagination-info" id="page_title_div"><!--<span>共20页</span> <span>第<b>10</b>页</span>--></div>
+            <ul class="pagination" id="page_ul">
+                <!--<li><a href="javascript:leftbackFn();" class="e2-pagination-prev">上一页</a></li>
+                <li><a href="javascript:goPage(8);">8</a></li>
+                <li><a href="javascript:goPage(8);">9</a></li>
+                <li><a href="#" class="e2-pagination-active">10</a></li>
+                <li><a href="javascript:goPage(8);">11</a></li>
+                <li><a href="javascript:goPage(8);">12</a></li>
+                <li><a href="javascript:rightnextFn();" class="e2-pagination-next">下一页</a></li>-->
+            </ul>
+        </div>
+
+        <div class="e2-leftprev" id="pager_left_div"><a href="javascript:leftbackFn();"><img src="images/left.png"></a></div>
+        <div class="e2-rightnext" id="pager_right_div"><a href="javascript:rightnextFn();"><img src="images/right.png"></a></div>
+
+    </div>
+
+    <div class="e2-lightbox"></div>
+    <div class="e2-adddiv">
+        <img src="images/x.png" class="e2-x">
+
+        <div class="e2-adddiv-title">户型</div>
+        <div class="e2-adddiv-select" id="house_id_div">
+            <!--<a href="#" onclick="house_onclickFn(this)" class="active" tag="1">别墅</a>
+            <a href="#" onclick="house_onclickFn(this)">复式</a>
+            <a href="#" onclick="house_onclickFn(this)">平层</a>
+            <a href="#" onclick="house_onclickFn(this)">公寓</a>-->
+        </div>
+        <div class="e2-adddiv-title">面积</div>
+        <div class="e2-adddiv-select" id="mj_div">
+            <!--<a href="#" onclick="mj_onclick(this)" class="active" tag="120">120平米以下</a>
+            <a href="#" onclick="mj_onclick(this)">120-180平米</a>
+            <a href="#" onclick="mj_onclick(this)">180-240平米</a>
+            <a href="#" onclick="mj_onclick(this)">240米以上</a>
+            <a href="#" onclick="mj_onclick(this)">120-180平米</a>
+            <a href="#" onclick="mj_onclick(this)">180-240平米</a>
+            <a href="#" onclick="mj_onclick(this)">240米以上</a>-->
+        </div>
+        <div class="e2-adddiv-button"><button class="btn btn-lg e2-adddiv-btn" onclick="select_houseandmjFn();">确认</button></div>
+    </div>
+
+    <!-- <div class="e2-ad">
+                <table border="0" width="100%">
+                    <tr>
+                        <td align="left"><img src="images/ad1.png"></td>
+                        <td align="center"><img src="images/ad2.png"></td>
+                        <td align="right"><img src="images/ad3.png"></td>
+                    </tr>
+                </table>
+    </div> -- >
+
+
+    <!-- End -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/utils/JSLINQ.js"></script>
+    <script type="text/javascript" src="js/utils/accounting.js"></script>
+    <script type="text/javascript" src="js/utils/ajaxuitl.js"></script>
+    <script type="text/javascript" src="viewjs/ad.js"></script>
+    <script type="text/javascript" src="viewjs/d1.js"></script>
+</body>
+</html>

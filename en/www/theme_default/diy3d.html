@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/msg.css">
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+</head>
+
+<body>
+    <div class="erun">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png"></a>
+            </div>
+             <div class="menu">
+                <a href="login.html">
+                    <div class="m m1">log in</div>
+                </a>
+                <a href="orderlist.html">
+                    <div class="m m2">Order</div>
+                </a>
+                <a href="search.html">
+                    <div class="m m3">Search</div>
+                </a>
+                <a href="cart.html">
+                    <div class="m m4">Cart</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <section>
+                <iframe id="if3d" name="demo-iframe" src="" width="100%" height="885">
+                    <h2>This is cool home decorate a design or door model to modify the page, not currently logged in</h2>
+                </iframe>
+            </section>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+
+<script>
+
+    require(["jquery", "jsuitl/yirunapi"], function ($, API) {
+
+        var id = $.getUrlVar("id");
+        var type = $.getUrlVar("type");
+        
+        switch (type) {
+            case "1":
+                API.getTerminal3d(2, id, function (data) {
+                    if (data && data.errorCode == 0 && data.iframeurl && data.iframeurl.length > 1) {
+                        $("#if3d").attr("src", data.iframeurl);
+                    }
+                });
+                break;
+            case "2":
+                API.getTerminal3d(1, id, function (data) {
+                    if (data && data.errorCode == 0 && data.iframeurl && data.iframeurl.length > 1) {
+                        $("#if3d").attr("src", data.iframeurl);
+                    }
+                });
+                break;
+            default:
+                API.getTerminal3d(0, "", function (data) {
+                    if (data && data.errorCode == 0 && data.iframeurl && data.iframeurl.length > 1) {
+                        $("#if3d").attr("src", data.iframeurl);
+                    }
+                });
+                break;
+        }
+      
+
+
+    });
+
+
+    if (window.postMessage) {
+        var callback = function (ev) {
+            //alert(ev.data);
+            if (ev.origin === 'http://www.kujiale.com' ||
+                ev.origin === 'http://yun.kujiale.com' ||
+                ev.origin === 'https://www.kujiale.com' ||
+                ev.origin === 'https://yun.kujiale.com') {
+                // handle message in ev ...
+                var data = JSON.parse(ev.data)
+                if (data.action === 'kjl_rendered') {
+                    if (data.imgtype == 'quanjing') {
+                        $('#if3d').attr('src', data.pano);
+                    }
+                }
+
+                if (data.action === 'kjl_completed') {
+
+                    window.location = '3d.html'
+                }
+            }
+        };
+        if ('addEventListener' in document) {
+            window.addEventListener('message', callback, false);
+        } else if ('attachEvent' in document) {
+            window.attachEvent('onmessage', callback);
+        }
+    } else {
+        // 如果不支持postMessage， 则使用ie6/7的window共有属性navigator进行hack
+        window.navigator.listenKJL = function (msg) {
+            alert(msg)
+            // var data = JSON.parse(ev.data)
+        };
+    }
+</script>
+</html>

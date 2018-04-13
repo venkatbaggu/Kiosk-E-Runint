@@ -1,0 +1,228 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>亿润终端机</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/e2z.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/msg.css" />
+    <link rel="stylesheet" href="css/virtualkeyboard/virtualkeyboard.css" />
+    <style>
+        .e2-b1-s2-search { text-align: left; position: relative; }
+        .e2-b1-s2-button { border: 0; background: none; position: absolute; right: 5px; top: -3px; }
+        
+    </style>
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<style>
+             .swiper-pagination-bullet { width: 10px; height: 10px; border-radius: 10px; transition: all 1s; background: #FFF; opacity: 1; margin: 0 2px !important; }
+             .swiper-pagination-bullet-active { background: #ff6600; width: 30px; transition: all 1s; }
+             .swiper-pagination-bullets { position: absolute; z-index: 99; text-align: center; }
+         </style>
+     </head>
+
+     <body>
+         <div class="e2-top">
+             <div class="swiper-container1" style="height:396px; position: relative;">
+                 <div class="swiper-wrapper" id="adwrapper">
+                     <div class="swiper-slide"><img src="images/banner.png" style="height:357px"></div>
+                     <div class="swiper-slide"><img src="images/banner.png"></div>
+                     <div class="swiper-slide"><img src="images/banner.png"></div>
+                 </div>
+
+                 <div class="swiper-pagination1"></div>
+             </div>
+         </div>-->
+
+
+</head>
+
+<body>
+    <div class="e2-top carousel slide" id="myCarousel">
+
+        <ol id="ad_target_ol" class="carousel-indicators"></ol>
+        <div id="e_run_ad" class="carousel-inner">
+
+        </div>
+    </div>
+
+
+    <div class="e2-section">
+        <div class="e2-b1-s1">
+            <div class="e2-b1-s1-left">
+                <div class="e2-b1-s1-left-1"><a href="b0.html"><img src="images/tcon-fanhuib.png"></a></div>
+                <div class="e2-b1-s1-left-2"><a href="#"><img src="images/icon-location.png"> 佛山</a></div>
+            </div>
+            <div class="e2-b1-s1-right">
+                <a href="index.html">首页</a>
+                <a href="b0.html" class="e2-menu-actvie">商品</a>
+                <a href="d0.html">设计</a>
+                <a href="c0.html">装修</a>
+                <a href="e1.html">家居DIY</a>
+            </div>
+        </div>
+
+        <div class="e2-b1-s2">
+            <div id="root_type_div" class="e2-b1-s2-1">  <a href="#">加载中</a> > <a href="#">加载中</a></div>
+            <div class="e2-b1-s2-search">
+                <input type="text" placeholder="搜索" id="search_input" style="text-align:center;">
+                <button class="e2-b1-s2-button"><img src="images/sure-icon.png" width="20" onclick="searchFn()"></button>
+            </div>
+
+            <div class="e2-b1-s2-2">
+                <span id="typename_span" class="orange">加载中</span>
+                <div class="e2-b1-s2-right">
+                    排序：
+                    <span class="e2-b1-s2-2-dropdown">
+                        <button type="button" class="btn dropdown-toggle " onclick="changSelectorder('new')">综合</button>
+                    </span>
+
+                    <span class="e2-b1-s2-2-dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="e2-b1-s2-2-dropdown1" data-toggle="dropdown">
+                            销量
+                            <span class="caret" style="transform:scale(2)"></span>
+                        </button>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="e2-b1-s2-2-dropdown1">
+                            <a id="sale_toggle_a" href="javascript:changSelectorder('sale_toggle')" class="active">从低到高</a>
+                            <a id="sale_a" href="javascript:changSelectorder('sale')">从高到低</a>
+                        </div>
+
+                    </span>
+
+                    <span class="e2-b1-s2-2-dropdown">
+                        <button type="button" class="btn dropdown-toggle" id="e2-b1-s2-2-dropdown2" data-toggle="dropdown">
+                            价格
+                            <span class="caret" style="transform:scale(2)" ></span>
+                        </button>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="e2-b1-s2-2-dropdown2">
+                            <a id="price_toggle_a" href="javascript:changSelectorder('price_toggle')" class="active">从低到高</a>
+                            <a id="price_a" href="javascript:changSelectorder('price')">从高到低</a>
+                        </div>
+                    </span>
+
+
+                </div>
+            </div>
+            <div class="e2-b1-s2-3"><a href="javascript:window.history.back();"><img src="images/tcon-fenlei.png"></a></div>
+        </div>
+
+        <div id="goods_list_div" class="e2-b1-s3">
+            <!--<div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>
+            <div class="e2-b1-s3-block">
+                <img src="images/b1-s3-1.png" class="img-responsive">
+                <div class="e2-b1-s3-title">厨房装饰瓷砖厨房</div>
+                <div class="e2-b1-s3-info"><span class="e2-b1-s3-price">¥ 688</span> <span class="pull-right"><del>¥ 999</del></span></div>
+            </div>-->
+        </div>
+        <div id="pager_root_div" class="e2-pagination">
+            <div class="e2-pagination-info"><span id="total_page_span">共20页</span> <span>第<b id="currPage_b">10</b>页</span></div>
+            <ul id="pageNo_ul" class="pagination">
+                <!--<li><a href="javascript:backPage();" class="e2-pagination-prev">上一页</a></li>
+                <li><a class="e2-pagination-active" href="javascript:toPage(1)">1</a></li>
+                <li><a href="javascript:toPage(2)">2</a></li>
+                <li><a href="javascript:toPage(3)" >3</a></li>
+                <li><a href="javascript:toPage(4)">4</a></li>
+                <li><a href="javascript:toPage(5)">5</a></li>
+                <li><a href="javascript:nextPage();" class="e2-pagination-next">下一页</a></li>-->
+            </ul>
+        </div>
+
+        <div id="pager_left_div" class="e2-leftprev"><a href="javascript:backPage();"><img src="images/left.png"></a></div>
+        <div id="pager_right_div" class="e2-rightnext"><a href="javascript:nextPage();"><img src="images/right.png"></a></div>
+    </div>
+
+    <div class="e2-ad">
+        <table border="0" width="100%">
+            <tr>
+                <td align="left"><img src="images/ad1.png"></td>
+                <td align="center"><img src="images/ad2.png"></td>
+                <td align="right"><img src="images/ad3.png"></td>
+            </tr>
+        </table>
+    </div>
+    <!-- End -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/utils/JSLINQ.js"></script>
+    <script type="text/javascript" src="js/utils/accounting.js"></script>
+    <script type="text/javascript" src="js/utils/ajaxuitl.js"></script>
+    <script type="text/javascript" src="js/utils/vkb.js"></script>
+    <script type="text/javascript" src="viewjs/ad.js"></script>
+    <script type="text/javascript" src="viewjs/b1.js"></script>
+
+</body>
+</html>

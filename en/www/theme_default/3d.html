@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>终端机界面</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/msg.css">
+    <script type="text/javascript" src="../jsuitl/lib/require.js" data-main="../mainFnc.js"></script>
+    <script type="text/javascript" src="../jsuitl/lib/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="erun">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png"></a>
+            </div>
+            <div class="menu">
+                    <a href="login.html">
+                        <div class="m m1">log in</div>
+                    </a>
+                    <a href="orderlist.html">
+                        <div class="m m2">Order</div>
+                    </a>
+                    <a href="search.html">
+                        <div class="m m3">Search</div>
+                    </a>
+                    <a href="cart.html">
+                        <div class="m m4">Cart</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <div class="sidebar">
+
+                    <a>
+                        <div class="b b-active">Home Page</div>
+                    </a>
+                    <a href="mall.html">
+                        <div class="b">Mall</div>
+                    </a>
+                    <a href="union.html">
+                        <div class="b">Alliance</div>
+                    </a>
+                    <a href="factory.html">
+                        <div class="b">Manufacturers</div>
+                    </a>
+                    <a href="3d.html">
+                        <div class="b">3D showroom</div>
+                    </a>
+
+                    <div class="shbutton sh1">
+                        B<br>
+                        a<br>
+                        r<br>
+                        <
+                    </div>
+                    <div class="shbutton sh2">
+                        B<br>
+                        a<br>
+                        r<br>
+                        >
+                    </div>
+
+                </div>
+
+                <div class="index">
+                    <div class=" d3div">
+                        <iframe src="http://www.kujiale.com/xiaoguotu/pano/3FO4FSH9NJL8" frameborder="0" width="1000" height="400"></iframe>
+                        <div class="d3div1">
+                            <img src="images/3dtm.gif" width="1000" height="400" alt="" />
+                        </div>
+                        <div class="d3div2">
+                            <a href="diy3d.html">
+                                <img src="images/3dtman.gif" /></a>
+                        </div>
+                    </div>
+                    <div class="zd-index-bottom">
+
+                        <div class="d3div3">
+                            <h2>My Design</h2>
+                            <ul id="mydesign_ul" class="d3ul" style="height: 150px;">
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="d3div3">
+                            <h2>My Model</h2>
+                            <ul id="myfloorplan_ul" class="d3ul" style="height: 150px;">
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="footer">
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            var pagesize = 5;
+            var design_page = 1;
+            var design_count = 0;
+            var floorplan_page = 1;
+            var floorplan_count = 0;
+
+
+            var mydesign_Back = function () {
+                if (design_page > 1) {
+                    design_page = design_page - 1;
+                    getMydesignFn();
+                } else {
+                    design_page = 1;
+                }
+            };
+
+            var mydesign_Next = function () {
+                var tmp = design_page * pagesize;
+                if (tmp < design_count) {
+                    design_page = design_page + 1;
+                    getMydesignFn();
+                }
+
+            };
+
+            var getMydesignFn = function () {
+                require(["jquery", "jsuitl/yirunapi"], function ($, API) {
+                    var design_ul = $("#mydesign_ul");
+                    design_ul.html("");
+
+                    API.getMydesign(design_page, pagesize, function (resultdatas) {
+                        design_count = resultdatas.count;
+                        if (resultdatas.errorCode == "0" && resultdatas.designs.length > 0) {
+
+                            if (design_page == 1) {
+                                design_ul.append('<li class="ljt"><a href="javascript:mydesign_Back()"><img src="images/ljt.png" /></a></li>');
+                            } else {
+                                design_ul.append('<li class="ljt"><a href="javascript:mydesign_Back()"><img src="images/ljt1.png" /></a></li>');
+                            } var tmp = "";
+                            $.each(resultdatas.designs, function (index, item) {
+                                tmp = tmp + '<li><a href="diy3d.html?type=1&id=' + item.obsDesignId + '"> <img src="' + item.mainPic + '" /></a><div class="d3div4"><a href="#">' + item.name + '</a></div></li>';//<a href="javascript:delMydesign(' + item.obsDesignId + ');" class="cccc">×</a>
+                            });
+                            design_ul.append(tmp);
+                            if ((design_page * pagesize) < design_count) {
+                                design_ul.append('<li class="ljt"><a href="javascript:mydesign_Next()"><img src="images/rjt1.png" /></a></li>');
+                            }
+                        }
+                    });
+
+                });
+
+            };
+
+
+            var myfloorplan_Back = function () {
+                if (floorplan_page > 1) {
+                    floorplan_page = floorplan_page - 1;
+                    getMyfloorplanFn();
+                } else {
+                    floorplan_page = 1;
+                }
+            };
+
+            var myfloorplan_Next = function () {
+                var tmp = floorplan_page * pagesize;
+                if (tmp < floorplan_count) {
+                    floorplan_page = floorplan_page + 1;
+                    getMyfloorplanFn();
+                }
+
+            };
+
+            var getMyfloorplanFn = function () {
+                require(["jquery", "jsuitl/yirunapi"], function ($, API) {
+                    var floorplan_ul = $("#myfloorplan_ul");
+                    floorplan_ul.html("");
+
+                    API.getMyfloorplan(floorplan_page, pagesize, function (resultdatas) {
+                        floorplan_count = resultdatas.count;
+
+                        if (resultdatas.errorCode == "0" && resultdatas.floorPlans.length > 0) {
+                            if (floorplan_page == 1) {
+
+                                floorplan_ul.append('<li class="ljt"><a href="javascript:myfloorplan_Back()"><img src="images/ljt.png" /></a></li>');
+                            } else {
+
+                                floorplan_ul.append('<li class="ljt"><a href="javascript:myfloorplan_Back()"><img src="images/ljt1.png" /></a></li>');
+                            } var tmp = "";
+
+                            $.each(resultdatas.floorPlans, function (index, item) {
+
+                                tmp = tmp + '<li><a href="diy3d.html?type=2&id=' + item.obsPlanId + '"> <img src="' + item.smallPics + '" /></a><div class="d3div4"><a href="#">' + item.name + '</a></div></li>';//<a href="javascript:delMyfloorplan(' + item.obsPlanId + ');" class="cccc">×</a>
+                            });
+                            floorplan_ul.append(tmp);
+                            if ((floorplan_page * pagesize) < floorplan_count) {
+                                floorplan_ul.append('<li class="ljt"><a href="javascript:myfloorplan_Next()"><img src="images/rjt1.png" /></a></li>');
+                            }
+                        }
+                    });
+                });
+            };
+            var delMydesign = function (id) {
+                design_page = 1;
+                getMydesignFn();
+            };
+            var delMyfloorplan = function (id) {
+                floorplan_page = 1;
+                getMyfloorplanFn();
+            };
+
+            $(function () {
+                getMydesignFn();
+                getMyfloorplanFn();
+
+
+            });
+        </script>
+</body>
+</html>

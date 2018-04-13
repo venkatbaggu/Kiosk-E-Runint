@@ -1,0 +1,136 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>亿润终端机</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/e2z.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/msg.css" />
+    <link rel="stylesheet" href="css/virtualkeyboard/virtualkeyboard.css" />
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<style>
+            .swiper-pagination-bullet { width: 10px; height: 10px; border-radius: 10px; transition: all 1s; background: #FFF; opacity: 1; margin: 0 2px !important; }
+            .swiper-pagination-bullet-active { background: #ff6600; width: 30px; transition: all 1s; }
+            .swiper-pagination-bullets { position: absolute; z-index: 99; text-align: center; }
+        </style>
+    </head>
+
+    <body>
+        <div class="e2-top">
+            <div class="swiper-container1" style="height:396px; position: relative;">
+                <div class="swiper-wrapper" id="adwrapper">
+                    <div class="swiper-slide"><img src="images/banner.png" style="height:357px"></div>
+                    <div class="swiper-slide"><img src="images/banner.png"></div>
+                    <div class="swiper-slide"><img src="images/banner.png"></div>
+                </div>
+
+                <div class="swiper-pagination1"></div>
+            </div>
+        </div>-->
+
+
+</head>
+
+<body>
+    <div class="e2-top carousel slide" id="myCarousel">
+
+        <ol id="ad_target_ol" class="carousel-indicators"></ol>
+        <div id="e_run_ad" class="carousel-inner">
+
+        </div>
+    </div>
+
+
+    <div class="e2-section e2-section-noad">
+        <div class="e2-b21-s1">
+            <div class="e2-b21-s1-left">
+                <div class="e2-b21-s1-left-1"><a href="javascript:window.history.back();"><img src="images/tcon-fanhuib.png"></a></div>
+                <div class="e2-b21-s1-left-2"><a href="#"><img src="images/icon-location.png"> 佛山</a></div>
+            </div>
+            <div class="e2-b21-s1-right">
+                <a href="index.html">首页</a>
+                <a href="b0.html" class="e2-menu-actvie">商品</a>
+                <a href="d0.html">设计</a>
+                <a href="c0.html">装修</a>
+                <a href="e1.html">家居DIY</a>
+            </div>
+        </div>
+
+        <div class="e2-b21-s2">
+            <div class="e2-b21-s2-title" id="title_div">
+                <!--<a href="#">墙地面</a> > <a href="#">涂料</a> > > <a href="#">多涂乐涂料</a> > <a href="#">高仕（亚洲）涂料有限公司</a> > 商家简介-->
+            </div>
+            <div class="e2-b21-s2-info">
+                <div class="e2-b21-s2-logo"><img src="images/nologo.jpg" id="logo_img"></div>
+                <div class="e2-b21-s2-name">高仕（亚洲）涂料有限公司</div>
+                <div class="e2-b21-s2-addr">地址：澳门特别行政区新口岸宋玉生广场180号（中山厂：中山市三角镇金三大道西五号）</div>
+                <div class="e2-b21-s2-phone">联系电话：400-8910-138</div>
+                <!--<button class="btn e2-b21-s2-button btn-lg" >商家简介</button>-->
+                <div class="e2-b21-s2-qr">
+                    <img src="" id="qr_img">
+                    <p>扫码关注</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="e2-b22-s3 ">
+            <ul class="e2-b22-s3-1 nav nav-tabs" id="myTab">
+                <li class="e2-b22-s3-1-title active"><a href="#e2-b22-a1" data-toggle="tab">公司介绍</a></li>
+                <li class="e2-b22-s3-1-title"><a href="#e2-b22-a2" data-toggle="tab">企业证书</a></li>
+                <li class="e2-b22-s3-1-title" id="dvr_tab"><a href="#e2-b22-a3" data-toggle="tab">实时监控</a></li>
+            </ul>
+            <div class="e2-b22-s3-2 tab-content" id="myTabContent">
+                <div class="e2-b22-s3-2-1 tab-pane fade in active" id="e2-b22-a1">
+
+                </div>
+                <div class="e2-b22-s3-2-2 tab-pane fade " id="e2-b22-a2">
+
+                </div>
+                <div class="e2-b22-s3-2-3 tab-pane fade " id="e2-b22-a3">
+                    <input id="dvrurl" type="hidden" value="" />
+                    <div class="e2-b22-s3-2-login">
+                        <div class="e2-b22-s3-2-name">
+                            <input type="text" class="form-control" id="username_input" placeholder="DVR帐号">
+                        </div>
+                        <div class="e2-b22-s3-2-password">
+                            <input type="password" class="form-control" id="password_input" placeholder="DVR密码">
+                        </div>
+
+                        <div class="e2-b22-s3-2-button">
+                            <button class="btn btn-lg btn-block" onclick="dvr_loginFn()">登录</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--  <div class="e2-ad">
+              <table border="0" width="100%">
+                  <tr>
+                      <td align="left"><img src="images/ad1.png"></td>
+                      <td align="center"><img src="images/ad2.png"></td>
+                      <td align="right"><img src="images/ad3.png"></td>
+                  </tr>
+              </table>
+      </div>  -->
+    <!-- End -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/utils/JSLINQ.js"></script>
+    <script type="text/javascript" src="js/utils/accounting.js"></script>
+    <script type="text/javascript" src="js/utils/ajaxuitl.js"></script>
+    <script type="text/javascript" src="js/utils/vkb.js"></script>
+    <script type="text/javascript" src="viewjs/ad.js"></script>
+    <script type="text/javascript" src="viewjs/b22.js"></script>
+</body>
+</html>

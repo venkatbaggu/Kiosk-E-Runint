@@ -1,0 +1,212 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>亿润终端机</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/e2z.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/msg.css" />
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--<style>
+            .swiper-pagination-bullet { width: 10px; height: 10px; border-radius: 10px; transition: all 1s; background: #FFF; opacity: 1; margin: 0 2px !important; }
+            .swiper-pagination-bullet-active { background: #ff6600; width: 30px; transition: all 1s; }
+            .swiper-pagination-bullets { position: absolute; z-index: 99; text-align: center; }
+        </style>
+    </head>
+
+    <body>
+        <div class="e2-top">
+            <div class="swiper-container1" style="height:396px; position: relative;">
+                <div class="swiper-wrapper" id="adwrapper">
+                    <div class="swiper-slide"><img src="images/banner.png" style="height:357px"></div>
+                    <div class="swiper-slide"><img src="images/banner.png"></div>
+                    <div class="swiper-slide"><img src="images/banner.png"></div>
+                </div>
+
+                <div class="swiper-pagination1"></div>
+            </div>
+        </div>-->
+
+
+</head>
+
+<body>
+    <div class="e2-top carousel slide" id="myCarousel">
+
+        <ol id="ad_target_ol" class="carousel-indicators">
+
+            <!--<li data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>-->
+        </ol>
+        <div id="e_run_ad" class="carousel-inner">
+
+            <!--<div class="item active"><img src="http://www.e-runint.com/upload/2017/06/28/20170628083700902.png"></div>
+            <div class="item"><img src="http://www.e-runint.com/upload/2017/06/24/20170624052955571.png"></div>
+            <div class="item"><img src="http://www.e-runint.com/upload/2017/06/24/20170624052955174.png"></div>
+            <div class="item"><img src="http://www.e-runint.com/upload/2017/06/24/20170624052955952.png"></div>-->
+        </div>
+    </div>
+
+    <div class="e2-section">
+        <div class="e2-index-s1">
+            <div class="e2-index-s1-1">
+                <img src="images/index-s1-01.png">
+                <div class="e2-index-s1-1-1"><a href="javascript:window.history.back();"><img src="images/tcon-fanhui.png"></a></div>
+                <div class="e2-index-s1-1-2"><a href="#"><img src="images/icon-location.png"> 佛山</a></div>
+            </div>
+            <div class="e2-index-s1-2">
+                <div class="e2-index-s1-2-title">
+                    <div class="e2-index-s1-2-a active" onclick="type_click(0)" name="tuijianType">客厅</div>
+                    <div class="e2-index-s1-2-a" onclick="type_click(1)" name="tuijianType">房间</div>
+                    <div class="e2-index-s1-2-a" onclick="type_click(2)" name="tuijianType">厨房</div>
+                    <div class="e2-index-s1-2-a" onclick="type_click(3)" name="tuijianType">卫生间</div>
+                    <div class="e2-index-s1-2-more pull-right"><a href="b0.html"><img src="images/tcon-chakangengduo.png"></a></div>
+                    <p style="width:175px;"></p>
+                </div>
+
+                <div class="e2-index-s1-2-product">
+
+
+                    <div class="swiper-container e2-index-s1-2-type1 show">
+                        <div id="list1" class="swiper-wrapper swiper-no-swiping">
+                            <!--<div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子1</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子2</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子3</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子4</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子5</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子6</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子7</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子8</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子9</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">a装饰椅子0</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>-->
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="swiper-container e2-index-s1-2-type2">
+                        <div id="list2" class="swiper-wrapper swiper-no-swiping">
+                            <!--<div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子1</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子2</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子3</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子4</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子5</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子6</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子7</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子8</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子9</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">b装饰椅子0</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>-->
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+
+                    <div class="swiper-container e2-index-s1-2-type3">
+                        <div id="list3" class="swiper-wrapper swiper-no-swiping">
+                            <!--<div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子1</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子2</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子3</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子4</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子5</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子6</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子7</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子8</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子9</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">c装饰椅子0</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>-->
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+
+                    <div class="swiper-container e2-index-s1-2-type4">
+                        <div id="list4" class="swiper-wrapper  swiper-no-swiping">
+                            <!--<div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子1</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子2</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子3</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子4</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子5</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子6</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子7</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子8</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子9</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>
+                            <div class="swiper-slide"><a href="#"><img src="images/index-s1-a.png" class="img-responsive"><div class="e2-index-s1-2-info">d装饰椅子0</div><div class="e2-index-s1-2-price">¥ 90</div></a></div>-->
+
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="e2-index-s2">
+            <table border="0" width="100%">
+                <tr>
+                    <td><a href="d0.html"><img src="images/index-s2-01.png"></a></td>
+                    <td><a href="c0.html"><img src="images/index-s2-02.png"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="e2-index-s3">
+            <div class="e2-index-s3-1"><a href="e1.html"><img src="images/index-s3-01.png"></a></div>
+            <div class="e2-index-s3-2"><a href="javascript:;" data-toggle="modal" data-target="#myModal"><img src="images/index-s3-02.png"></a></div>
+        </div>
+    </div>
+
+    <div class="e2-ad">
+        <!--<iframe src="http://www.e-runint.com/kad/xad" frameborder="0" width="100%" height="100%"></iframe>-->
+        <table border="0" width="100%">
+
+            <tr>
+                <td align="left"><img src="images/ad1.png"></td>
+                <td align="center"><img src="images/ad2.png"></td>
+                <td align="right"><img src="images/ad3.png"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style=" width: 300px; margin-top: 50%;">
+            <div class="modal-content">
+                <div class="modal-header" styssdle="border:none;">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="font-size: 3em; margin-top: -10px;">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body text-center">
+                    <img width="200" height="200" src="http://www.e-runint.com/qrcode.php?data=http://www.e-runint.com/systemseller/index">
+                </div>
+                <div class="modal-footer" style="border:none;">
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <!-- End -->
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/utils/accounting.js"></script>
+    <script type="text/javascript" src="js/utils/ajaxuitl.js"></script>
+    <script type="text/javascript" src="viewjs/ad.js"></script>
+    <script type="text/javascript" src="viewjs/index.js"></script>
+    <!--<script type="text/javascript">
+        $("#myCarousel").carousel('cycle');
+    </script>-->
+
+</body>
+</html>

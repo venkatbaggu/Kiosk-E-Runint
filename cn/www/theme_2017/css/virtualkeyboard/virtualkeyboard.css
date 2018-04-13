@@ -1,0 +1,71 @@
+﻿/*键盘背景*/
+.key_board { margin-top: 30%; left: 30px; position: absolute; border: 1px solid #ccc; padding: 20px; border-radius: 5px; background-color: #000; /*background: url(keyboard_bg.png) repeat;*/ /*background:rgba(0,0,0,0.44);*/ /*height: 365px;*/ /*中文时候*/ height: 365px; width: 980px; display: none; z-index: 2147483647; }
+/*Logo样式*/
+.keyboard_logo { position: absolute; left: 10px; top: 10px; height: 12px; width: 27px; background: url('keyboard_ico.png') no-repeat; }
+/*清空已输出数据*/
+.keyboard_remove_target { position: absolute; right: 50px; top: 6px; height: 25px; line-height: 20px; border: 1px solid #e8e8e8; cursor: pointer; padding: 2px 10px; text-align: center; color: #fff; }
+    /*清空输出的点击效果*/
+    .keyboard_remove_target:active { border: 1px solid #4f4f4f; color: #9f9f9f; }
+/*关闭按钮*/
+.keyboard_close { position: absolute; right: 8px; top: 6px; height: 20px; width: 20px; cursor: pointer; background: url('keyboard_close1.png'); }
+    /*关闭按钮点击效果*/
+    .keyboard_close:active { background: url('keyboard_close2.png'); }
+
+/*键盘左边布局*/
+.key_board_l { position: absolute; }
+/*键盘右边布局*/
+.key_board_r { position: absolute; right: 20px; }
+/*键盘按键行布局*/
+.keyboard_row, .keyboard_row td { padding: 0; vertical-align: top; border-collapse: collapse; margin-top: 5px; }
+
+/*键盘按键背景样式*/
+.keyboard_key { font-size: 24px; position: relative; display: block; width: 42px; height: 42px; margin-right: 3px; cursor: pointer; text-align: center; border: 1px solid #e8e8e8; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; line-height: 42px; color: #fff; }
+    /*点击键盘效果*/
+    .keyboard_key:active { border: 1px solid #4f4f4f; color: #9f9f9f; }
+
+
+/*数字键盘0键*/
+.keyboard_zero { width: 89px; }
+/*波浪符*/
+.keyboard_tilde { width: 55px; }
+/*点号*/
+.keyboard_dot { width: 75px; }
+/*大小切换写按钮*/
+.keyboard_capslock { font-size: 14px; width: 100px; }
+/*左边上档键位置*/
+.keyboard_shift { font-size: 20px; width: 130px; }
+/*退格键样式*/
+.keyboard_backspace { width: 109px; }
+/*回车键*/
+.keyboard_enter { font-size: 20px; width: 111px; }
+/*底部其余按钮*/
+.keyboard_bottomkey { width: 60px; }
+/*空格键*/
+.keyboard_space { width: 473px; }
+/*下划线*/
+.keyboard_underline { width: 81px; }
+/*亮灯*/
+.keyboard_suppressed { background-color: #00dddd; }
+/*键盘备选框布局*/
+.keyboard_outputtext { margin-top: 5px; margin-bottom: 10px; font-size: 24px; background-color: #fff; border-radius: 5px; color: #000000; padding:0px 5px; height: 30px; padding-right: 120px; }
+/*已确认的备选字*/
+.keyboard_outputtext1 { height: 30px; line-height: 30px; overflow: hidden; white-space: nowrap; }
+/*拼音备选字外框*/
+.keyboard_outputtextpinyin { background-color: #e4e4e4; }
+/*拼音备选字*/
+.keyboard_outputtext2 { height: 30px; line-height: 30px; overflow: hidden; white-space: nowrap; }
+    /*拼音备选字间隔*/
+    .keyboard_outputtext2 > span { margin-right: 10px; }
+
+/*备选字的行左右移动*/
+.keyboard_outputtext_overflow { position: absolute; right: 20px; height: 40px; width: 110px; font-size: 28px; color: #00ddff; font-weight: bold; top: 38px; }
+    /*备选字的行左右移动*/
+    .keyboard_outputtext_overflow > div { position: absolute; display: block; width: 50px; height: 100%; text-align: center; cursor: pointer; margin-top:-15px }
+        /*备选字的行左右移动*/
+        .keyboard_outputtext_overflow > div:first-child { left: 0px; }
+        /*备选字的行左右移动*/
+        .keyboard_outputtext_overflow > div:last-child { right: 0px; }
+        /*备选字的行左右移动*/
+        .keyboard_outputtext_overflow > div:active { color: #9f9f9f; }
+/*备选字的行左右移动*/
+.keyboard_outputtext_overflow_pinyin { top: 88px; }
